@@ -1,6 +1,8 @@
 package Datos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import javax.persistence.*;
@@ -14,12 +16,17 @@ public class Pokedex implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @JacksonXmlProperty(isAttribute = true)
+    @JsonProperty("id")
     private int id;
     @Column(name = "nome")
+    @JsonProperty("nome")
     private String nome;
     @Column(name = "peso")
+    @JsonProperty("peso")
     private double peso;
     @Column(name = "misc")
+    @JsonProperty("misc")
     private String misc;
 
     public Pokedex(){
