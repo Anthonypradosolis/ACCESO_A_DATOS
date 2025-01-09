@@ -4,11 +4,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @Entity
+@JacksonXmlRootElement
 @Table(name = "Pokemon")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Pokemon implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +29,7 @@ public class Pokemon implements Serializable {
 
     @Column(name ="nacemento")
     @JacksonXmlProperty
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @JsonProperty("nacemento")
     private Date nacemento;
 

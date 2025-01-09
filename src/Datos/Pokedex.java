@@ -1,9 +1,15 @@
 package Datos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@JacksonXmlRootElement
+@Table(name = "Pokedex")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Pokedex implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
