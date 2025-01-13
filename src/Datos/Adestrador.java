@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -33,7 +34,8 @@ public class Adestrador implements Serializable {
     @JsonProperty("nacemento")
     private Date nacemento;
 
-    @OneToMany(mappedBy = "adestrador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "adestrador", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     @JsonProperty
     private List<Pokemon> pokemons = new ArrayList<>();
 
@@ -70,8 +72,30 @@ public class Adestrador implements Serializable {
         this.nacemento = nacemento;
     }
 
+    public List<Pokemon> getPokemons() {
+        return pokemons;
+    }
+    public void setPokemons(List<Pokemon> pokemons) {
+        this.pokemons = pokemons;
+    }
+
+    public void addPokemon(Pokemon pokemon) {
+        if(pokemon!=null){
+            this.pokemons.add(pokemon);
+        }else{
+            System.out.println("No se puede añadir un pokemon nulo");
+        }
+    }
+    public void removePokemon(Pokemon pokemon) {
+        pokemons.remove(pokemon);
+        pokemon.setAdestrador(null);
+    }
+
     @Override
     public String toString() {
+        for(Pokemon pokemon : pokemons){
+            System.out.println(pokemon);
+        }
         return "Adestrador{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +

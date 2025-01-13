@@ -53,6 +53,7 @@ public class MetodosAdestrador {
         try (Session session = Utilidad.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             NativeQuery query = session.createSQLQuery("DELETE FROM adestrador");
+            session.createNativeQuery("ALTER SEQUENCE adestrador_id_seq RESTART WITH 1").executeUpdate();
             query.executeUpdate();
             transaction.commit();
         } catch (Exception e) {

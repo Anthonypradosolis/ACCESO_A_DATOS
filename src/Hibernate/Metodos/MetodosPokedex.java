@@ -70,10 +70,11 @@ public class MetodosPokedex {
         }
     }
 
-    public void borrarTabla() {
+    public void borrarTablaPokedex() {
         try (Session session = Utilidad.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             NativeQuery<?> query = session.createNativeQuery("DELETE FROM pokedex");
+            session.createNativeQuery("ALTER SEQUENCE pokedex_id_seq RESTART WITH 1").executeUpdate();
             query.executeUpdate();
             transaction.commit();
         } catch (Exception e) {

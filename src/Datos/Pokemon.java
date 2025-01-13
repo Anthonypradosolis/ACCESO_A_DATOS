@@ -4,10 +4,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @Entity
@@ -35,10 +33,12 @@ public class Pokemon implements Serializable {
 
     @ManyToOne
     @JoinColumn(name ="pokedexentry",referencedColumnName = "id", nullable = true)
+    @JsonManagedReference
     private Pokedex pokemonentry;
 
     @ManyToOne
     @JoinColumn(name ="adestrador",referencedColumnName = "id", nullable = true)
+    @JsonBackReference
     private Adestrador adestrador;
 
     public Pokemon() {
@@ -97,8 +97,6 @@ public class Pokemon implements Serializable {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", nacemento=" + nacemento +
-                ", pokemonentry=" + pokemonentry +
-                ", adestrador=" + adestrador +
-                '}';
+                ", pokemonentry=" + pokemonentry ;
     }
 }
