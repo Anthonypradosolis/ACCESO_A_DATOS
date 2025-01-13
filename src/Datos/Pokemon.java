@@ -97,6 +97,6 @@ public class Pokemon implements Serializable {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", nacemento=" + nacemento +
-                ", pokemonentry=" + pokemonentry ;
+                ", pokemonentry=" + (pokemonentry !=null ? pokemonentry.getNome() : "null")+ "}";
     }
 }
