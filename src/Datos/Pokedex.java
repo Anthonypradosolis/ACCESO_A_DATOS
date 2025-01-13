@@ -1,5 +1,6 @@
 package Datos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -7,6 +8,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @JacksonXmlRootElement
@@ -28,6 +30,10 @@ public class Pokedex implements Serializable {
     @Column(name = "misc")
     @JsonProperty("misc")
     private String misc;
+
+    @OneToMany(mappedBy = "pokemonentry", cascade = CascadeType.ALL)
+    @JsonBackReference
+    private List<Pokemon> pokemon;
 
     public Pokedex(){
 
@@ -68,6 +74,13 @@ public class Pokedex implements Serializable {
 
     public void setMisc(String misc) {
         this.misc = misc;
+    }
+
+    public List<Pokemon> getPokemon() {
+        return pokemon;
+    }
+    public void setPokemon(List<Pokemon> pokemon) {
+        this.pokemon = pokemon;
     }
 
     @Override

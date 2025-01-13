@@ -15,8 +15,8 @@ public class Main {
         MetodosAdestrador metodosAdestrador = new MetodosAdestrador();
         MetodosPokemon metodosPokemon = new MetodosPokemon();
         MetodosPokedex metodosPokedex = new MetodosPokedex();
-/**
 
+/**
         Adestrador adestrador1 = new Adestrador(1, "Ash", Date.valueOf("1990-05-22"));
         Adestrador adestrador2 = new Adestrador(2, "Misty", Date.valueOf("1992-07-04"));
 
@@ -85,7 +85,7 @@ public class Main {
         adestrador2.addPokemon(toxtricity);
         adestrador2.addPokemon(gardevoir);
 
-        **/
+**/
 
 /**
         metodosPokemon.borrarTablaPokemon();
@@ -93,8 +93,8 @@ public class Main {
         metodosAdestrador.borrarTablaAdestrador();
 **/
 
-//        metodosPokemon.listarPokemons();
-//        metodosAdestrador.listarAdestrador();
+        metodosPokemon.listarPokemons();
+        metodosAdestrador.listarAdestrador();
 
         List<Pokemon> listaPokemon = metodosPokemon.listarPokemons();
         List<Adestrador> listaAdestrador = metodosAdestrador.listarAdestrador();
@@ -102,6 +102,16 @@ public class Main {
         JsonUtils jsonUtils = new JsonUtils();
         jsonUtils.guardarJson("pokemons.json", listaPokemon);
         jsonUtils.guardarJson("adestradores.json", listaAdestrador);
+
+        List<Pokemon> pokemonsImportados = jsonUtils.importarJson("pokemons.json", Pokemon[].class);
+        List<Adestrador> adestradoresImportados = jsonUtils.importarJson("adestradores.json", Adestrador[].class);
+
+        System.out.println("Pokemons importados: ");
+        pokemonsImportados.forEach(System.out::println);
+
+        System.out.println("Adestradores importados: ");
+        adestradoresImportados.forEach(System.out::println);
+
 
     }
 }
