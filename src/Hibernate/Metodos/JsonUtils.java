@@ -2,7 +2,6 @@ package Hibernate.Metodos;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.imageio.IIOException;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
