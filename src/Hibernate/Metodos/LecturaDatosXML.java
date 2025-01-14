@@ -2,7 +2,9 @@ package Hibernate.Metodos;
 
 import Datos.Adestrador;
 import Datos.Auxiliares.Adestradores;
+import Datos.Auxiliares.Pokemons;
 import Datos.Pokedex;
+import Datos.Pokemon;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import javax.xml.stream.XMLOutputFactory;
@@ -100,7 +102,7 @@ public class LecturaDatosXML {
         }
     }
 
-    public void escribAXMLNuevo(){
+    public void escribAXMLAdestrador(){
         XmlMapper xmlMapper = new XmlMapper();
         xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
@@ -117,6 +119,29 @@ public class LecturaDatosXML {
             xmlMapper.writeValue(fileWriter, contenedor);
 
             System.out.println("Datos añadidos al archivo XML correctamente: adestrador.xml");
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo XML: " + e.getMessage());
+        }
+
+    }
+
+    public void escribirAXMLPokemon(){
+        XmlMapper xmlMapper = new XmlMapper();
+        xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        try (FileWriter fileWriter = new FileWriter("pokemon.xml", true)) {
+            // Obtener la lista de objetos
+            MetodosPokemon metodosPokemon = new MetodosPokemon();
+            List<Pokemon> list = metodosPokemon.listarPokemons();
+
+            // Crear una clase contenedora que sirva como raíz para los objetos
+            Pokemons contenedor = new Pokemons();
+            contenedor.setPokemons(list);
+
+            // Escribir el contenedor en el archivo
+            xmlMapper.writeValue(fileWriter, contenedor);
+
+            System.out.println("Datos añadidos al archivo XML correctamente: pokemon.xml");
         } catch (IOException e) {
             System.out.println("Error al escribir en el archivo XML: " + e.getMessage());
         }

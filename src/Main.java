@@ -95,15 +95,16 @@ public class Main {
 
         List<Pokemon> listaPokemon = metodosPokemon.listarPokemons();
         List<Adestrador> listaAdestrador = metodosAdestrador.listarAdestrador();
-/**
+
         JsonUtils jsonUtils = new JsonUtils();
         jsonUtils.guardarJson("pokemons.json", listaPokemon);
         jsonUtils.guardarJson("adestradores.json", listaAdestrador);
-**/
+
         LecturaDatosXML lecturaDatosXML = new LecturaDatosXML();
-
-        lecturaDatosXML.escribAXMLNuevo();
-
+/**
+        lecturaDatosXML.escribAXMLAdestrador();
+        lecturaDatosXML.escribirAXMLPokemon();
+**/
         /**
         jsonUtils.leerJSONPokemon();
         jsonUtils.leerJSONAdestradores();

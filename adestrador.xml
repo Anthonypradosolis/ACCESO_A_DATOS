@@ -1,0 +1,244 @@
+<Adestradores>
+  <adestradores id="1">
+    <pokemons>
+      <pokemons id="1">
+        <pokemonentry id="1">
+          <nome>Pikachu</nome>
+          <peso>6.0</peso>
+          <misc>Electric type</misc>
+        </pokemonentry>
+        <nome>Pikachu</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="2">
+        <pokemonentry id="2">
+          <nome>Bulbasaur</nome>
+          <peso>7.0</peso>
+          <misc>Grass/Poison type</misc>
+        </pokemonentry>
+        <nome>Bulbasaur</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="3">
+        <pokemonentry id="3">
+          <nome>Charmander</nome>
+          <peso>8.5</peso>
+          <misc>Fire type</misc>
+        </pokemonentry>
+        <nome>Charmander</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="4">
+        <pokemonentry id="4">
+          <nome>Squirtle</nome>
+          <peso>9.0</peso>
+          <misc>Water type</misc>
+        </pokemonentry>
+        <nome>Squirtle</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="5">
+        <pokemonentry id="5">
+          <nome>Caterpie</nome>
+          <peso>2.9</peso>
+          <misc>Bug type</misc>
+        </pokemonentry>
+        <nome>Caterpie</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="6">
+        <pokemonentry id="6">
+          <nome>Weedle</nome>
+          <peso>3.2</peso>
+          <misc>Bug/Poison type</misc>
+        </pokemonentry>
+        <nome>Weedle</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+    </pokemons>
+    <nome>Ash</nome>
+    <nacemento>1990-05-21</nacemento>
+  </adestradores>
+  <adestradores id="2">
+    <pokemons>
+      <pokemons id="7">
+        <pokemonentry id="7">
+          <nome>Pidgey</nome>
+          <peso>4.0</peso>
+          <misc>Normal/Flying type</misc>
+        </pokemonentry>
+        <nome>Pidgey</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="8">
+        <pokemonentry id="8">
+          <nome>Rattata</nome>
+          <peso>3.5</peso>
+          <misc>Normal type</misc>
+        </pokemonentry>
+        <nome>Rattata</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="9">
+        <pokemonentry id="9">
+          <nome>Spearow</nome>
+          <peso>4.0</peso>
+          <misc>Normal/Flying type</misc>
+        </pokemonentry>
+        <nome>Spearow</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="10">
+        <pokemonentry id="10">
+          <nome>Ekans</nome>
+          <peso>6.9</peso>
+          <misc>Poison type</misc>
+        </pokemonentry>
+        <nome>Ekans</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="11">
+        <pokemonentry id="11">
+          <nome>Toxtricity</nome>
+          <peso>40.0</peso>
+          <misc>Electric/Poison type</misc>
+        </pokemonentry>
+        <nome>Toxtricity</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="12">
+        <pokemonentry id="12">
+          <nome>Gardevoir</nome>
+          <peso>48.4</peso>
+          <misc>Psychic/Fairy type</misc>
+        </pokemonentry>
+        <nome>Gardevoir</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+    </pokemons>
+    <nome>Misty</nome>
+    <nacemento>1992-07-03</nacemento>
+  </adestradores>
+</Adestradores>
+<Adestradores>
+  <adestradores id="1">
+    <pokemons>
+      <pokemons id="1">
+        <pokemonentry id="1">
+          <nome>Pikachu</nome>
+          <peso>6.0</peso>
+          <misc>Electric type</misc>
+        </pokemonentry>
+        <nome>Pikachu</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="2">
+        <pokemonentry id="2">
+          <nome>Bulbasaur</nome>
+          <peso>7.0</peso>
+          <misc>Grass/Poison type</misc>
+        </pokemonentry>
+        <nome>Bulbasaur</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="3">
+        <pokemonentry id="3">
+          <nome>Charmander</nome>
+          <peso>8.5</peso>
+          <misc>Fire type</misc>
+        </pokemonentry>
+        <nome>Charmander</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="4">
+        <pokemonentry id="4">
+          <nome>Squirtle</nome>
+          <peso>9.0</peso>
+          <misc>Water type</misc>
+        </pokemonentry>
+        <nome>Squirtle</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="5">
+        <pokemonentry id="5">
+          <nome>Caterpie</nome>
+          <peso>2.9</peso>
+          <misc>Bug type</misc>
+        </pokemonentry>
+        <nome>Caterpie</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="6">
+        <pokemonentry id="6">
+          <nome>Weedle</nome>
+          <peso>3.2</peso>
+          <misc>Bug/Poison type</misc>
+        </pokemonentry>
+        <nome>Weedle</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+    </pokemons>
+    <nome>Ash</nome>
+    <nacemento>1990-05-21</nacemento>
+  </adestradores>
+  <adestradores id="2">
+    <pokemons>
+      <pokemons id="7">
+        <pokemonentry id="7">
+          <nome>Pidgey</nome>
+          <peso>4.0</peso>
+          <misc>Normal/Flying type</misc>
+        </pokemonentry>
+        <nome>Pidgey</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="8">
+        <pokemonentry id="8">
+          <nome>Rattata</nome>
+          <peso>3.5</peso>
+          <misc>Normal type</misc>
+        </pokemonentry>
+        <nome>Rattata</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="9">
+        <pokemonentry id="9">
+          <nome>Spearow</nome>
+          <peso>4.0</peso>
+          <misc>Normal/Flying type</misc>
+        </pokemonentry>
+        <nome>Spearow</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="10">
+        <pokemonentry id="10">
+          <nome>Ekans</nome>
+          <peso>6.9</peso>
+          <misc>Poison type</misc>
+        </pokemonentry>
+        <nome>Ekans</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="11">
+        <pokemonentry id="11">
+          <nome>Toxtricity</nome>
+          <peso>40.0</peso>
+          <misc>Electric/Poison type</misc>
+        </pokemonentry>
+        <nome>Toxtricity</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+      <pokemons id="12">
+        <pokemonentry id="12">
+          <nome>Gardevoir</nome>
+          <peso>48.4</peso>
+          <misc>Psychic/Fairy type</misc>
+        </pokemonentry>
+        <nome>Gardevoir</nome>
+        <nacemento>2022-12-31</nacemento>
+      </pokemons>
+    </pokemons>
+    <nome>Misty</nome>
+    <nacemento>1992-07-03</nacemento>
+  </adestradores>
+</Adestradores>
