@@ -34,7 +34,7 @@ public class Adestrador implements Serializable {
     @JsonProperty("nacemento")
     private Date nacemento;
 
-    @OneToMany(mappedBy = "adestrador", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "adestrador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
     @JsonProperty
     private List<Pokemon> pokemons = new ArrayList<>();

@@ -1,10 +1,7 @@
 import Datos.Adestrador;
 import Datos.Pokedex;
 import Datos.Pokemon;
-import Hibernate.Metodos.JsonUtils;
-import Hibernate.Metodos.MetodosAdestrador;
-import Hibernate.Metodos.MetodosPokedex;
-import Hibernate.Metodos.MetodosPokemon;
+import Hibernate.Metodos.*;
 
 import java.sql.Date;
 import java.util.List;
@@ -85,7 +82,7 @@ public class Main {
         adestrador2.addPokemon(toxtricity);
         adestrador2.addPokemon(gardevoir);
 
-**/
+
 
 /**
         metodosPokemon.borrarTablaPokemon();
@@ -98,19 +95,19 @@ public class Main {
 
         List<Pokemon> listaPokemon = metodosPokemon.listarPokemons();
         List<Adestrador> listaAdestrador = metodosAdestrador.listarAdestrador();
-
+/**
         JsonUtils jsonUtils = new JsonUtils();
         jsonUtils.guardarJson("pokemons.json", listaPokemon);
         jsonUtils.guardarJson("adestradores.json", listaAdestrador);
+**/
+        LecturaDatosXML lecturaDatosXML = new LecturaDatosXML();
 
-        List<Pokemon> pokemonsImportados = jsonUtils.importarJson("pokemons.json", Pokemon[].class);
-        List<Adestrador> adestradoresImportados = jsonUtils.importarJson("adestradores.json", Adestrador[].class);
+        lecturaDatosXML.escribAXMLNuevo();
 
-        System.out.println("Pokemons importados: ");
-        pokemonsImportados.forEach(System.out::println);
-
-        System.out.println("Adestradores importados: ");
-        adestradoresImportados.forEach(System.out::println);
+        /**
+        jsonUtils.leerJSONPokemon();
+        jsonUtils.leerJSONAdestradores();
+        **/
 
 
     }

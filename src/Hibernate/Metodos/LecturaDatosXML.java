@@ -1,7 +1,10 @@
 package Hibernate.Metodos;
 
 import Datos.Adestrador;
+import Datos.Auxiliares.Adestradores;
 import Datos.Pokedex;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
@@ -97,11 +100,27 @@ public class LecturaDatosXML {
         }
     }
 
+    public void escribAXMLNuevo(){
+        XmlMapper xmlMapper = new XmlMapper();
+        xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-    /**
-     * Exportar en XML dos entradas de adestrador
-     */
-    public void exportarAdestrador(){
+        try (FileWriter fileWriter = new FileWriter("adestrador.xml", true)) {
+            // Obtener la lista de objetos
+            MetodosAdestrador metodosAdestrador = new MetodosAdestrador();
+            List<Adestrador> list = metodosAdestrador.listarAdestrador();
+
+            // Crear una clase contenedora que sirva como raíz para los objetos
+            Adestradores contenedor = new Adestradores();
+            contenedor.setAdestradores(list);
+
+            // Escribir el contenedor en el archivo
+            xmlMapper.writeValue(fileWriter, contenedor);
+
+            System.out.println("Datos añadidos al archivo XML correctamente: adestrador.xml");
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo XML: " + e.getMessage());
+        }
 
     }
+
 }
